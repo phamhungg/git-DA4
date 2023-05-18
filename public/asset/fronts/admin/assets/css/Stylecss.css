@@ -1,0 +1,76 @@
+.csss{
+    margin: 10px 0 10px 0;
+}
+
+.div-chung{
+    
+    display: grid;
+    grid-template-columns: 35% 30% 30%;
+}
+
+.khung-nd{
+    margin: 0 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    
+}
+.dong{
+  
+    margin: 8px 0;
+}
+.sub{
+    margin: 0 20px;
+}
+.nut{
+    border: 0px;
+    background-color: white;
+}
+.icon{
+    color: red;
+}
+.icon1{
+    color: green;
+}
+
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: var(--bs-modal-margin);
+    pointer-events: none;
+    height: 1000px;
+}
+.modal-content {
+    
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    height: 50%;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+    margin-left: 300px;
+    margin-top: 100px;
+}
+
+.modal-backdrop {
+    --bs-backdrop-zindex: 1;
+    --bs-backdrop-bg: #000;
+    --bs-backdrop-opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: var(--bs-backdrop-zindex);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bs-backdrop-bg);
+}
+.kh{
+    
+    height: 40px;
+    border-radius: 5px;
+}
