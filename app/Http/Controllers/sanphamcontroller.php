@@ -17,8 +17,11 @@ class sanphamcontroller extends Controller
     }
     public function index()
     {
-        $sanpham = sanpham::all();
-        return view('admin.sanpham.index', ['sanpham' => $sanpham]);
+        $sanpham = sanpham::paginate(5);
+        if($key=request()->key){
+            $sanpham= sanpham::where('TenSanPham','like','%'.$key.'%')->paginate(5);
+        }
+        return view('admin.sanpham.index', ['sanpham' => $sanpham],compact('sanpham'))->with('1',(request()->input('page',1)-1)*5);
     }
 
     public function store(Request $req)

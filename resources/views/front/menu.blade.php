@@ -14,7 +14,7 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">
-              <li><a href="{{route("home.trangchu")}}">Home</a></li>
+              <li><a href="{{route("home.trangchu")}}">Trang chủ</a></li>
               <li><a href="#">Danh mục <span class="caret"></span></a>
                  <ul class="dropdown-menu">    
                 @foreach ($menu as $me)
@@ -25,7 +25,7 @@
                   
                </ul>
               </li>
-              <li><a href="#">Women <span class="caret"></span></a>
+              {{-- <li><a href="#">Women <span class="caret"></span></a>
                 <ul class="dropdown-menu">  
                   <li><a href="#">Kurta & Kurti</a></li>                                                                
                   <li><a href="#">Trousers</a></li>              
@@ -86,24 +86,27 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="#">Sports</a></li>
-             <li><a href="#">Digital <span class="caret"></span></a>
+              <li><a href="#">Sports</a></li> --}}
+             <li><a href="{{route('home.baiviet')}}">Blogs <span class="caret"></span></a>
                 <ul class="dropdown-menu">                
-                  <li><a href="#">Camera</a></li>
-                  <li><a href="#">Mobile</a></li>
-                  <li><a href="#">Tablet</a></li>
-                  <li><a href="#">Laptop</a></li>                                                
-                  <li><a href="#">Accesories</a></li>                
+                  @foreach ($baiviet as $me)
+                  <li>
+                    <a href="{{route('home.baiviet.get_loaibv',$me->Maloaibaiviet)}}">{{$me->Tenloaibaiviet}}
+                    </a></li>
+              @endforeach  
+                               
                 </ul>
               </li>
-              <li><a href="#">Furniture</a></li>            
-              <li><a href="blog-archive.html">Blog <span class="caret"></span></a>
-                <ul class="dropdown-menu">                
+              <li><a href="#">Furniture</a></li>  
+             
+                    
+              {{-- <li><a href="{{route('home.get_loaibv')}}">Blog <span class="caret"></span></a> --}}
+                {{-- <ul class="dropdown-menu">                
                   <li><a href="blog-archive.html">Blog Style 1</a></li>
                   <li><a href="blog-archive-2.html">Blog Style 2</a></li>
                   <li><a href="blog-single.html">Blog Single</a></li>                
                 </ul>
-              </li>
+              </li> --}}
               <li><a href="contact.html">Contact</a></li>
               <li><a href="#">Pages <span class="caret"></span></a>
                 <ul class="dropdown-menu">                

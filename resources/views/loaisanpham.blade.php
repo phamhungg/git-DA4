@@ -35,11 +35,14 @@
                 @foreach ($sp_theoloai as $sp)
                 <li>
                   <figure>
-                    <a  class="aa-product-img" href="#"><img src="/asset/fronts/dailyShop/img/women/{{$sp->AnhDaiDien}}" alt="polo shirt img" style="width: 250px; height: 300px"></a>
+                    <a  class="aa-product-img" href="{{route('home.get_chitiet',$sp->MaSanPham)}}"><img src="/asset/fronts/dailyShop/img/women/{{$sp->AnhDaiDien}}" alt="polo shirt img" style="width: 250px; height: 300px"></a>
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
-                    <figcaption>
-                      <h4 class="aa-product-title"><a href="#">{{$sp->TenSanPham}}</a></h4>
-                      <span class="aa-product-price">$45.50</span><span class="aa-product-price"><del>$65.50</del></span>
+                    <figcaption>  
+                      <h4 class="aa-product-title"><a href="{{route('home.get_chitiet',$sp->MaSanPham)}}" style="font-size: 14px">{{$sp->TenSanPham}}</a></h4>
+                      <span class="aa-product-price">$45.50</span>
+                      @if ($sp->sanpham_gia)
+                        <span class="aa-product-price"><del>{{$sp->sanpham_gia->Gia}}</del></span>
+                      @endif
                       <p class="aa-product-descrip">{{$sp->MoTaSanPham}}</p>
                     </figcaption>
                   </figure>                         

@@ -105,7 +105,7 @@
                   <li><a href="account.html">Tài khoản</a></li>
                   <li><a href="{{route("home.sanpham")}}">Sản phẩm</a></li>
                   <li class="hidden-xs"><a href="wishlist.html">Yêu thích</a></li>
-                  <li class="hidden-xs"><a href="{{route("home.cart")}}">Giỏ hàng</a></li>
+                  <li class="hidden-xs"><a href="{{route('home.cart')}}">Giỏ hàng</a></li>
                   <li class="hidden-xs"><a href="checkout.html">Thanh toán</a></li>
                   <li><a href="" data-toggle="modal" data-target="#login-modal">Đăng nhập</a></li>
                 </ul>
@@ -212,17 +212,17 @@
       <div class="modal-content">                      
         <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Login or Register</h4>
+          <h4>Đăng nhập & Đăng kí</h4>
           <form class="aa-login-form" action="">
-            <label for="">Username or Email address<span>*</span></label>
+            <label for="">Tài khoản<span>*</span></label>
             <input type="text" placeholder="Username or email">
-            <label for="">Password<span>*</span></label>
+            <label for="">Mật khẩu<span>*</span></label>
             <input type="password" placeholder="Password">
-            <button class="aa-browse-btn" type="submit">Login</button>
-            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Remember me </label>
-            <p class="aa-lost-password"><a href="#">Lost your password?</a></p>
+            <button class="aa-browse-btn" type="submit">Đăng nhập</button>
+            <label for="rememberme" class="rememberme"><input type="checkbox" id="rememberme"> Ghi nhớ </label>
+            <p class="aa-lost-password"><a href="#">Quên mật khẩu?</a></p>
             <div class="aa-register-now">
-              Don't have an account?<a href="account.html">Register now!</a>
+             Không có tài khoản?<a href="{{route('home.dangnhap')}}">Đăng kí ngay!</a>
             </div>
           </form>
         </div>                        
@@ -250,6 +250,6 @@
   <script type="text/javascript" src="/asset/fronts/dailyShop/js/nouislider.js"></script>
   <!-- Custom js -->
   <script src="/asset/fronts/dailyShop/js/custom.js"></script> 
-
+  @yield('js-main')
   </body>
 </html>

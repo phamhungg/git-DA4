@@ -123,7 +123,12 @@ $index=1;
       <div class="d-flex align-items-center justify-content-between">
         
         <a href="{{route('admin.create')}}" style="background-color: blue; color: white;margin-left: 20px; padding: 5px; border-radius: 5px">Thêm mới</a>
-        
+        <form action=""class="form-inline">
+          <div class="form-group">
+              <input name="key" class="form-control" placeholder="Tìm kiếm..." >
+          </div>
+          <button type="submit" class="btn btn-primary " style="margin-left: 10px;">Submit</button>
+  </form>
     </div>
     <div style="margin-left: 2%;margin-top: 1%;" class="select">
         <select ng-model="pageSize" ng-change="getPage(1)" class="limitShow">
@@ -149,7 +154,9 @@ $index=1;
                 <th>Tên sp</th>
                 <th>Mô tả</th>
                 <th>Màu sắc</th>
-                
+                <th>
+                  NgayTao
+                </th>
                 <th>
                   
                 </th>
@@ -163,10 +170,12 @@ $index=1;
                 @foreach ($sanpham as $sp)
               <tr>
                 <td>{{$index++}}</td>
+                
                 <td><img src ='/asset/fronts/dailyShop/img/women/{{$sp->AnhDaiDien}}' style="width: 100px"> </td>
                 <td>{{$sp->TenSanPham}}</td>
                 <td>{{$sp->MoTaSanPham}}</td>
                 <td>{{$sp->Mausac}}</td>
+                <td>{{$sp->NgayTao}}</td>
                 {{-- <td>{{$sp->Size}}</td> --}}
                 
                <td> <a  href="{{route('admin.edit',$sp->MaSanPham)}}"><i class="bi bi-pencil-square" style="color: rgb(0, 255, 174)"></i></a>
@@ -180,6 +189,7 @@ $index=1;
               </tr>
             </tbody>
           </table>
+          {{$sanpham->appends(request()->all())->links()}}
         </div>
       </div>
 

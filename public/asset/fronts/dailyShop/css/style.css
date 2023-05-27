@@ -4186,3 +4186,12 @@ img {
   }
 }
 
+.The{
+  width: 250px;
+}
+
+.fixed-div{
+  max-height: 100px; /* Định dạng chiều cao tối đa */
+  overflow: hidden; /* Ẩn nội dung vượt quá kích thước */
+}
+

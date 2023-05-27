@@ -16,12 +16,13 @@
             <!-- / logo  -->
              <!-- cart box -->
             <div class="aa-cartbox">
-              <a class="aa-cart-link" href="#">
+              <a class="aa-cart-link" href="{{route('home.cart')}}">
                 <span class="fa fa-shopping-basket"></span>
                 <span class="aa-cart-title">SHOPPING CART</span>
-                <span class="aa-cart-notify">2</span>
+               
+                <span class="aa-cart-notify">{{ session('order') ? count(session('order')) : 0 }}</span>
               </a>
-              <div class="aa-cartbox-summary">
+              {{-- <div class="aa-cartbox-summary">
                 <ul>
                   <li>
                     <a class="aa-cartbox-img" href="#"><img src="/asset/fronts/dailyShop/img/woman-small-2.jpg" alt="img"></a>
@@ -49,14 +50,15 @@
                   </li>
                 </ul>
                 <a class="aa-cartbox-checkout aa-primary-btn" href="checkout.html">Checkout</a>
-              </div>
+              </div> --}}
             </div>
             <!-- / cart box -->
             <!-- search box -->
             <div class="aa-search-box">
-              <form action="">
-                <input type="text" name="" id="" placeholder="Search here ex. 'man' ">
-                <button type="submit"><span class="fa fa-search"></span></button>
+              <form action="{{route('home.timkiem')}}" method="POST">
+                @csrf
+                <input type="text" name="tukhoa_1" id="tukhoa_1" placeholder="Tìm kiếm">
+                <button type="submit" name="search"><span class="fa fa-search"></span></button>
               </form>
             </div>
             <!-- / search box -->             

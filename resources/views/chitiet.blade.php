@@ -2,7 +2,7 @@
 @section('content')
      <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-    <img src="/asset/fronts/dailyShop/img/fashion/fashion-header-bg-8.jpg" alt="fashion img">
+    <div style="height: 300px;width: 1600px; background-color: #edcdcd50"></div>
     <div class="aa-catg-head-banner-area">
       <div class="container">
        <div class="aa-catg-head-banner-content">
@@ -51,7 +51,11 @@
                    <div class="aa-product-view-content">
                      <h3>{{$get_sanpham->TenSanPham}}</h3>
                      <div class="aa-price-block">
-                       <span class="aa-product-view-price">$34.99</span>
+                      {{-- @if ($get_sanpham->sanpham_gia)
+                     <h3> <span class="" style="color: red;">{{number_format($get_sanpham->sanpham_gia->Gia)}} đ</span></h3>
+                    @endif --}}
+                    <h3> <span class="" style="color: red;">{{number_format($get_sanpham->Giaban)}} đ</span></h3>
+
                        {{-- <p class="aa-product-avilability">Avilability: <span>In stock</span></p> --}}
                      </div>
                      <p>{{$get_sanpham->MoTaSanPham}}</p>
@@ -62,7 +66,7 @@
                        <a href="#">L</a>
                        <a href="#">XL</a>
                      </div>
-                     <h4>Màu sắc: {{$get_sanpham->Mausac}}</h4>
+                     <h4 style="color: blueviolet">Màu sắc: {{$get_sanpham->Mausac}}</h4>
                      <div class="aa-color-tag">
                        <a href="#" class="aa-color-green"></a>
                        <a href="#" class="aa-color-yellow"></a>
@@ -82,13 +86,16 @@
                          </select>
                        </form>
                        <p class="aa-prod-category">
-                         Category: <a href="#">Polo T-Shirt</a>
+                        @if ($get_sanpham->danhmuc->TenDanhMuc)
+                                Danh mục: <span style="color: orange">{{$get_sanpham->danhmuc->TenDanhMuc}}</span>
+                               
+                       @endif
                        </p>
                      </div>
                      <div class="aa-prod-view-bottom">
-                       <a class="aa-add-to-cart-btn" href="#">Add To Cart</a>
-                       <a class="aa-add-to-cart-btn" href="#">Wishlist</a>
-                       <a class="aa-add-to-cart-btn" href="#">Compare</a>
+                       <a class="aa-add-to-cart-btn" href="{{route('home.addTocart',$get_sanpham->MaSanPham)}}" style="background-color: rgb(165, 66, 66);color: white">Add To Cart</a>
+                       <a class="aa-add-to-cart-btn" href="#" style="background-color: rgb(183, 218, 23);color: white">Wishlist</a>
+                       <a class="aa-add-to-cart-btn" href="#" style="background-color: rgb(39, 211, 108);color: white">Compare</a>
                      </div>
                    </div>
                  </div>
@@ -182,13 +189,13 @@
              </div>
              <!-- Related product -->
              <div class="aa-product-related-item">
-               <h3>Related Products</h3>
+               <h3>Sản phẩm khác</h3>
                <ul class="aa-product-catg aa-related-item-slider">
                 @foreach ($sp_khac as $it)
                     <!-- start single product item -->
                  <li>
                    <figure>
-                     <a class="aa-product-img" href="#"><img src="/asset/fronts/dailyShop/img/women/{{$it->AnhDaiDien}}" alt="polo shirt img"></a>
+                     <a class="aa-product-img" href="#"><img src="/asset/fronts/dailyShop/img/women/{{$it->AnhDaiDien}}" style="width: 250px;height: 350px" alt="polo shirt img"></a>
                      <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                       <figcaption>
                        <h4 class="aa-product-title"><a href="#">{{$it->TenSanPham}}</a></h4>
@@ -273,6 +280,7 @@
                                    <option value="5">6</option>
                                  </select>
                                </form>
+                               
                                <p class="aa-prod-category">
                                  Category: <a href="#">Polo T-Shirt</a>
                                </p>
