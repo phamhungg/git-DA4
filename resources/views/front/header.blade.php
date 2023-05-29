@@ -6,9 +6,9 @@
             <!-- logo  -->
             <div class="aa-logo">
               <!-- Text based logo -->
-              <a href="index.html">
+              <a href="{{route('home.trangchu')}}">
                 <span class="fa fa-shopping-cart"></span>
-                <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
+                <p>Ivy<strong>Moda</strong> <span>Thiên đường mua sắm cho bạn</span></p>
               </a>
               <!-- img based logo -->
               <!-- <a href="index.html"><img src="/asset/fronts/dailyShop/img/logo.jpg" alt="logo img"></a> -->
@@ -17,8 +17,8 @@
              <!-- cart box -->
             <div class="aa-cartbox">
               <a class="aa-cart-link" href="{{route('home.cart')}}">
-                <span class="fa fa-shopping-basket"></span>
-                <span class="aa-cart-title">SHOPPING CART</span>
+                <span style="color: rgb(217, 42, 42)" class="fa fa-shopping-basket"></span>
+                <span class="aa-cart-title">GIỎ HÀNG</span>
                
                 <span class="aa-cart-notify">{{ session('order') ? count(session('order')) : 0 }}</span>
               </a>

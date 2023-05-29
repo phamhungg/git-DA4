@@ -3,11 +3,11 @@
       <div class="row">
         <div class="col-md-12">
           <div class="aa-subscribe-area">
-            <h3>Subscribe our newsletter </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex, velit!</p>
+            <h3>Theo dõi bản tin của chúng tôi </h3>
+            <p></p>
             <form action="" class="aa-subscribe-form">
-              <input type="email" name="" id="" placeholder="Enter your Email">
-              <input type="submit" value="Subscribe">
+              <input type="email" name="" id="" placeholder="Nhập email của bạn">
+              <input type="submit" value="Đăng kí">
             </form>
           </div>
         </div>
@@ -25,26 +25,31 @@
             <div class="row">
               <div class="col-md-3 col-sm-6">
                 <div class="aa-footer-widget">
-                  <h3>Main Menu</h3>
+                  <h3>Menu chính</h3>
                   <ul class="aa-footer-nav">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Our Services</a></li>
-                    <li><a href="#">Our Products</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Trang chủ</a></li>
+                    <li><a href="#">Dịch vụ của chúng tôi</a></li>
+                    <li><a href="#">Sản phẩm của chúng tôi</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
                   </ul>
                 </div>
               </div>
               <div class="col-md-3 col-sm-6">
                 <div class="aa-footer-widget">
                   <div class="aa-footer-widget">
-                    <h3>Knowledge Base</h3>
+                    <h3>Kiến thức cơ bản
+                      
+                     
+                    
+                      
+                     </h3>
                     <ul class="aa-footer-nav">
-                      <li><a href="#">Delivery</a></li>
-                      <li><a href="#">Returns</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="#">Discount</a></li>
-                      <li><a href="#">Special Offer</a></li>
+                      <li><a href="#">Vận chuyển</a></li>
+                      <li><a href="#"> Trả lại</a></li>
+                      <li><a href="#">  Dịch vụ</a></li>
+                      <li><a href="#">Giảm giá</a></li>
+                      <li><a href="#"> Đề nghị đặc biệt</a></li>
                     </ul>
                   </div>
                 </div>
@@ -52,13 +57,18 @@
               <div class="col-md-3 col-sm-6">
                 <div class="aa-footer-widget">
                   <div class="aa-footer-widget">
-                    <h3>Useful Links</h3>
+                    <h3>Liên kết hữu ích
+                     
+                      
+                     
+                      
+                      </h3>
                     <ul class="aa-footer-nav">
-                      <li><a href="#">Site Map</a></li>
-                      <li><a href="#">Search</a></li>
-                      <li><a href="#">Advanced Search</a></li>
-                      <li><a href="#">Suppliers</a></li>
-                      <li><a href="#">FAQ</a></li>
+                      <li><a href="#"> Sơ đồ trang web</a></li>
+                      <li><a href="#">Tìm kiếm</a></li>
+                      <li><a href="#">  Tìm kiếm nâng cao</a></li>
+                      <li><a href="#">Các nhà cung cấp</a></li>
+                      <li><a href="#">Câu hỏi thường gặp</a></li>
                     </ul>
                   </div>
                 </div>
@@ -66,9 +76,9 @@
               <div class="col-md-3 col-sm-6">
                 <div class="aa-footer-widget">
                   <div class="aa-footer-widget">
-                    <h3>Contact Us</h3>
+                    <h3>Liên hệ chúng tôi</h3>
                     <address>
-                      <p> 25 Astor Pl, NY 10003, USA</p>
+                      <p> 25 Astor Pl, NY 10003, VN</p>
                       <p><span class="fa fa-phone"></span>+1 212-982-4589</p>
                       <p><span class="fa fa-envelope"></span>dailyshop@gmail.com</p>
                     </address>
@@ -93,7 +103,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Designed by <a href="http://www.markups.io/">MarkUps.io</a></p>
+            
             <div class="aa-footer-payment">
               <span class="fa fa-cc-mastercard"></span>
               <span class="fa fa-cc-visa"></span>

@@ -177,7 +177,6 @@
                                 <input  type="text"  placeholder="Sdt" id="Sdt" name="SoDienThoai" required>
                               </div>
                             </div>
-
                             <div class="col-md-6">
                                 <div class="aa-checkout-single-bill">
                                   <input  type="text"  placeholder="Địa chỉ" id="diachi" name="diachi" required>
@@ -193,15 +192,23 @@
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill fixed-div">
                               
-                                <input  type="text" value="{{ $soLuongSanPham }}" name="Soluong" readonly>
+                               Số lượng <input  type="text" value="{{ $soLuongSanPham }}" name="Soluong" readonly>
                               </div>                             
                             </div> 
                             <div class="col-md-12">
                               <div class="aa-checkout-single-bill fixed-div">
                               
                                 <input  type="text" value="{{ $tongtien }}" name="Tongtien" readonly>
+                               
                               </div>                             
-                            </div>                           
+                            </div>  
+                            <div class="col-md-12">
+                              <div class="aa-checkout-single-bill fixed-div">
+                              
+                                <input type="hidden" name="TrangThaiDonHang" value="0">
+                               
+                              </div>                             
+                            </div>                          
                           </div>   
                           <button style="padding: 3px;background-color: brown;color: aliceblue;border: 0px;border-radius: 5px" type="submit">Hoàn tất thanh toán</button>
  
@@ -214,7 +221,7 @@
               </div>
               <div class="col-md-4">
                 <div class="checkout-right">
-                  <h4>Order Summary</h4>
+                  <h4>Thanh toán</h4>
                   <div class="aa-order-summary-area">
                     <table class="table table-responsive">
                         <thead>
@@ -248,13 +255,13 @@
                         </tbody>
                     </table>
                   </div>
-                  <h4>Payment Method</h4>
+                  {{-- <h4>Payment Method</h4>
                   <div class="aa-payment-method">                    
                     <label for="cashdelivery"><input type="radio" id="cashdelivery" name="optionsRadios"> Cash on Delivery </label>
                     <label for="paypal"><input type="radio" id="paypal" name="optionsRadios" checked> Via Paypal </label>
                     <img src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg" border="0" alt="PayPal Acceptance Mark">    
                                  
-                  </div>
+                  </div> --}}
                 </div>
               </div>
             </div>

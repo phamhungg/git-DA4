@@ -26,6 +26,11 @@
               <i class="bi bi-circle"></i><span>Bài viết</span>
             </a>
           </li>
+          <li>
+            <a href="{{route('admin.Danhmuc.danhmuc')}}">
+              <i class="bi bi-circle"></i><span>Danh mục</span>
+            </a>
+          </li>
         </ul>
       </li><!-- End Forms Nav -->
 
@@ -36,7 +41,19 @@
         <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
             <a href=" {{route('admin.donhang.donhang')}}">
-              <i class="bi bi-circle"></i><span>Đơn hàng</span>
+              <i class="bi bi-circle"></i><span>Đơn hàng chưa xác thực</span>
+             
+            </a>
+            <a href="{{route('admin.donhang.daxacthuc')}}">
+              <i class="bi bi-circle"></i><span>Đơn hàng đã xác thực</span>
+             
+            </a>
+            <a href="{{route('admin.donhang.chuathanhtoan')}}">
+              <i class="bi bi-circle"></i><span>Đơn hàng chưa thanh toán</span>
+              
+            </a>
+            <a href="{{route('admin.donhang.dathanhtoan')}}">
+              <i class="bi bi-circle"></i><span>Đơn hàng đã thanh toán</span>
             </a>
           </li>
           

@@ -8,6 +8,9 @@ class BaivietController extends Controller
 {
     public function baiviet(){
         $baiviet = chitiet::paginate(5);
+        if($key=request()->key){
+            $baiviet= chitiet::where('Tenbaiviet','like','%'.$key.'%')->paginate(5);
+        }
         return view('admin.baiviet.baiviet',['baiviet' => $baiviet])->with('1',(request()->input('page',1)-1)*5);
     }
     public function store(Request $req)
@@ -51,7 +54,7 @@ class BaivietController extends Controller
     public function save(Request $res, $id)
     {
         $pro =  chitiet::find($id);
-        $pro->Tenbaivet=$res-> Tenbaivet;
+        $pro->Tenbaivet=$res->Tenbaivet;
         $pro->Anh=$res-> Anh;
         $pro->Chitiet=$res-> Chitiet;
         $pro->ngaytao=$res-> ngaytao;

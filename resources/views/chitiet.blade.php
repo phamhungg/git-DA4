@@ -35,9 +35,9 @@
                          <div class="simpleLens-big-image-container"><a data-lens-image="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}" class="simpleLens-lens-image"><img src="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}" class="simpleLens-big-image"></a></div>
                        </div>
                        <div class="simpleLens-thumbnails-container">
-                           <a data-big-image="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}"  class="simpleLens-thumbnail-wrapper" ">
+                           <a data-big-image="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}"  class="simpleLens-thumbnail-wrapper" >
                            </a>                                    
-                           <a data-big-image="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}"  class="simpleLens-thumbnail-wrapper" ">
+                           <a data-big-image="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}"  class="simpleLens-thumbnail-wrapper" >
                            </a>
                            <a data-big-image="/asset/fronts/dailyShop/img/women/{{$get_sanpham->AnhDaiDien}}"  class="simpleLens-thumbnail-wrapper" href="#">
                    

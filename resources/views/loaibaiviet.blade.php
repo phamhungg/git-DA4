@@ -39,10 +39,10 @@
                          <p><a href="{{route('home.baiviet.get_chitietbv',$bv->Mabaiviet)}}">{{$bv->Tenbaivet}}</a> </p>
                          <div class="aa-article-bottom">
                            <div class="aa-post-author">
-                             Đăng bởi<a href="#">Phạm hùng</a>
+                             Đăng bởi<a href="#"> Phạm hùng</a>
                            </div>
                            <div class="aa-post-date">
-                             March 26th 2016
+                            {{ \Carbon\Carbon::parse($bv->ngaytao)->formatLocalized(' %d/%m/%Y') }}
                            </div>
                          </div>
                        </article>

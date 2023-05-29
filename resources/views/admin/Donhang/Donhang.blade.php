@@ -60,13 +60,26 @@ $index=1;
                 <td>{{$sp->NgayDat}}</td>
                 <td>{{$sp->Ngaygiao}}</td>
                 <td>{{$sp->Soluong}}</td>
-                <td>{{$sp->Tongtien}}</td>
-                <td>{{$sp->TrangThaiDonHang}}</td>
-                
+                <td>{{number_format($sp->Tongtien)}}đ</td>
+              <td>
+                @if ($sp->TrangThaiDonHang == 0)
+                Chưa xác thực
+               @elseif ($sp->TrangThaiDonHang == 1)
+                Đã xác thực
+               @elseif ($sp->TrangThaiDonHang == 2)
+                Chờ thanh toán
+               @elseif ($sp->TrangThaiDonHang == 3)
+                Đã thanh toán
+               @endif
+
+               @if ($sp->TrangThaiDonHang == 0)
+                <a style="background-color: rgb(132, 132, 85);color: aliceblue;margin-left: 10px;margin-right: -50px;padding: 3px;border-radius: 5px" href="{{ route('confirmOrder', ['id' =>$sp->MaDonHang]) }}">Xác nhận</a>
+               @endif
+             
+          </td>
                 
                <td> <a  href="{{route('admin.Chitietdonhang.Chitietdonhang',$sp->MaDonHang)}}"><i class="bi bi-eye-fill" style="color: rgb(181, 13, 223)"></i></a>
-               <td> <a onclick="return confirm('ban co muon xoa khong');"  href=""><i class="bi bi-trash" style="color: red"></i></a></td>
-              </tr>
+                <td> <a onclick="return confirm('ban co muon xoa khong');"  href="{{route('admin.donhang.Destroy',$sp->MaDonHang)}}"><i class="bi bi-trash" style="color: red"></i></a></td> </tr>
                 @endforeach
               
             </tbody>

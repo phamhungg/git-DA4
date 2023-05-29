@@ -21,7 +21,7 @@ class Homecontroller extends Controller
 
     public function trangchu(){
         $san_pham_moi = DB::table('sanpham')->orderBy('NgayTao', 'desc')->take(4)->get();
-        $sanpham = Productmodels::limit(10)->get();
+        $sanpham = Productmodels::limit(12)->get();
     //    $loaisp = menu::where('TrangThai',1)->orderBy('TenDanhMuc','ASC')->get();
     //    $loaibv = baiviet::where('TrangThai',1)->orderBy('Tenloaibaiviet','ASC')->get();
         return view('trangchu',['sanpham'=> $sanpham], ['san_pham_moi' => $san_pham_moi] );

@@ -34,10 +34,10 @@
                      <h2><a href="#">{{$get_chitietbv->Tenbaivet}}</a></h2>
                       <div class="aa-article-bottom">
                        <div class="aa-post-author">
-                         Đăng bởi <a href="#">Phạm Hùng</a>
+                         Đăng bởi Phạm Hùng
                        </div>
                        <div class="aa-post-date">
-                         Thứ năm ngày 26 năm 2023
+                        {{ \Carbon\Carbon::parse($get_chitietbv->ngaytao)->formatLocalized(' %d/%m/%Y') }}
                        </div>
                      </div>
                      <figure class="aa-blog-img">

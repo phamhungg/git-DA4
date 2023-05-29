@@ -20,28 +20,31 @@
                 <div class="row">
                     <div class="form-group" >
                         <strong>Mã danh mục</strong>
-                        <input type="text" name="MaDanhMuc" class="form-control" id="MaDanhMuc" ">
+                        <input type="text" name="MaDanhMuc" class="form-control" id="MaDanhMuc" >
                     </div>
                     <div class="form-group" >
                         <strong>Tên sản phẩm</strong>
-                        <input type="text" name="TenSanPham" class="form-control" id="TenSanPham" ">
+                        <input type="text" name="TenSanPham" class="form-control" id="TenSanPham" >
                     </div>
                     <div class="form-group">
                         <strong>Ảnh</strong>
-                        <input type="file" name="AnhDaiDien"class="form-control" id="AnhDaiDien" ">
+                        <input type="file" name="AnhDaiDien"class="form-control" id="AnhDaiDien" >
                     </div>
                     <div class="form-group">
                         <strong>Mô tả</strong>
-                        <input type="text-arial" name="MoTaSanPham"class="form-control" id="MoTaSanPham" ">
+                        <input type="text-arial" name="MoTaSanPham"class="form-control" id="MoTaSanPham" >
                     </div>
                     <div class="form-group">
                         <strong>Màu sắc</strong>
-                        <input type="text" name="Mausac"class="form-control" id="Mausac" ">
+                        <input type="text" name="Mausac"class="form-control" id="Mausac" >
                     </div>
-                   
+                    <div class="form-group">
+                        <strong>Giá bán</strong>
+                        <input type="text" name="Giaban"class="form-control" style="width: 150px" id="Giaban" >
+                    </div>
                     <div class="form-group">
                         <strong>Ngày tạo</strong>
-                        <input type="date" name="NgayTao"class="form-control" style="width: 150px" id="NgayTao" ">
+                        <input type="date" name="NgayTao"class="form-control" style="width: 150px" id="NgayTao" >
                     </div>
                
                   

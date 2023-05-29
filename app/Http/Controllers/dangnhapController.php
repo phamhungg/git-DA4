@@ -63,4 +63,9 @@ class dangnhapController extends Controller
             return redirect()->back()->with(['flag'=>'danger','message'=>'Đăng Nhập Không Thành Công']);
         }
     }
+    public function logout()
+{
+    Auth::logout();
+    return redirect()->route('dangnhap');
+}
 }

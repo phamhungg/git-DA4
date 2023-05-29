@@ -23,6 +23,7 @@ class thanhtoanController extends Controller
         $post->	Ngaygiao  = Carbon::now()->addDay(10)->toDateString();
         $post->	Tongtien  = $request->input('Tongtien');
         $post->Soluong = $request->input('Soluong');
+        $post->TrangThaiDonHang = $request->input('TrangThaiDonHang');
         $post->save();
         $order = session()->get('order',[]);
         if($order != null){

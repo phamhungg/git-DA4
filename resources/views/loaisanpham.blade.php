@@ -3,7 +3,7 @@
 <section id="aa-product-category">
     <div class="container">
       <div class="row">
-        <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3">
+        <div class="col-lg-9 col-md-9 col-sm-8 col-md-push-3" style="width: 1230px;left: 0px;">
           <div class="aa-product-catg-content">
             <div class="aa-product-catg-head">
               <div class="aa-product-catg-head-left">
@@ -39,7 +39,7 @@
                     <a class="aa-add-card-btn"href="#"><span class="fa fa-shopping-cart"></span>Add To Cart</a>
                     <figcaption>  
                       <h4 class="aa-product-title"><a href="{{route('home.get_chitiet',$sp->MaSanPham)}}" style="font-size: 14px">{{$sp->TenSanPham}}</a></h4>
-                      <span class="aa-product-price">$45.50</span>
+                      <span class="aa-product-price">{{number_format($sp->Giaban)}}đ</span>
                       @if ($sp->sanpham_gia)
                         <span class="aa-product-price"><del>{{$sp->sanpham_gia->Gia}}</del></span>
                       @endif
@@ -164,17 +164,15 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
+        {{-- <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
           <aside class="aa-sidebar">
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
+              
               <h3>Category</h3>
               <ul class="aa-catg-nav">
                 <li><a href="#">Men</a></li>
-                <li><a href="">Women</a></li>
-                <li><a href="">Kids</a></li>
-                <li><a href="">Electornics</a></li>
-                <li><a href="">Sports</a></li>
+               
               </ul>
             </div>
             <!-- single sidebar -->
@@ -282,7 +280,7 @@
               </div>                            
             </div>
           </aside>
-        </div>
+        </div> --}}
        
       </div>
     </div>

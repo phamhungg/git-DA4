@@ -123,12 +123,12 @@ $index=1;
       <div class="d-flex align-items-center justify-content-between">
         
         <a href="{{route('admin.create')}}" style="background-color: blue; color: white;margin-left: 20px; padding: 5px; border-radius: 5px">Thêm mới</a>
-        <form action=""class="form-inline">
+        <form  action=""class="form-inline" style="display: flex; width: 300px;">
           <div class="form-group">
               <input name="key" class="form-control" placeholder="Tìm kiếm..." >
           </div>
           <button type="submit" class="btn btn-primary " style="margin-left: 10px;">Submit</button>
-  </form>
+        </form>
     </div>
     <div style="margin-left: 2%;margin-top: 1%;" class="select">
         <select ng-model="pageSize" ng-change="getPage(1)" class="limitShow">
@@ -155,7 +155,7 @@ $index=1;
                 <th>Mô tả</th>
                 <th>Màu sắc</th>
                 <th>
-                  NgayTao
+                  Giá bán
                 </th>
                 <th>
                   
@@ -175,7 +175,7 @@ $index=1;
                 <td>{{$sp->TenSanPham}}</td>
                 <td>{{$sp->MoTaSanPham}}</td>
                 <td>{{$sp->Mausac}}</td>
-                <td>{{$sp->NgayTao}}</td>
+                <td>{{number_format($sp->Giaban)}} đ</td>
                 {{-- <td>{{$sp->Size}}</td> --}}
                 
                <td> <a  href="{{route('admin.edit',$sp->MaSanPham)}}"><i class="bi bi-pencil-square" style="color: rgb(0, 255, 174)"></i></a>

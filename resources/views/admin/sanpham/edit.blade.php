@@ -44,7 +44,10 @@ $index=1;
                   <strong>Màu sắc</strong>
                   <input type="text" name="Mausac"class="form-control" id="Mausac" value="{{$sp->Mausac}}">
               </div>
-             
+              <div class="form-group">
+                <strong>Giá bán</strong>
+                <input type="text" name="Giaban"class="form-control" style="width: 150px" id="NgayTao" ">
+            </div>
               <div class="form-group">
                   <strong>Ngày tạo</strong>
                   <input type="date" name="NgayTao"class="form-control" style="width: 150px" id="NgayTao" value="{{$sp->NgayTao}}">

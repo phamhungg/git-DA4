@@ -48,7 +48,7 @@
                    
                     <div class="form-group">
                         <strong>Ngày tạo</strong>
-                        <input type="date" name="Ngaytao"class="form-control" style="width: 150px" id="NgayTao" ">
+                        <input type="date" name="Ngaytao"class="form-control" style="width: 150px" id="NgayTao" >
                     </div>
 
                 </div>

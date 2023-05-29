@@ -51,7 +51,7 @@ $index=1;
                 <th>STT</th>
                 <th>Mã loại</th>
                 <th>Ảnh</th>
-                <th>Tên sp</th>
+                <th>Tên bài viết</th>
                 {{-- <th>Mô tả</th> --}}
                 
                 <th>
@@ -60,7 +60,9 @@ $index=1;
                 <th>
                   
                 </th>
-                
+                <th>
+                  
+                </th>
                 
               </tr>
             </thead>
@@ -84,7 +86,7 @@ $index=1;
                 @endforeach
                   
                
-              </tr>
+              
             </tbody>
           </table>
           {{$baiviet->links()}}

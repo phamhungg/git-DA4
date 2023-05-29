@@ -6,6 +6,7 @@ use App\Http\Controllers\dangnhapController;
 use App\Http\Controllers\dondathangController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Homecontroller;
+use App\Http\Controllers\quantridanhmuc;
 use App\Http\Controllers\sanphamcontroller;
 use App\Http\Controllers\thanhtoanController;
 
@@ -36,6 +37,10 @@ Route::get('/dangnhap',[dangnhapController::class,'dangnhap'])->name("home.dangn
 Route::post('/dangky',[dangnhapController::class,'postSignin'])->name('home.postSignin');
 Route::post('/dangnhaptk',[dangnhapController::class,'postlogin'])->name('home.postlogin');
 
+
+//dang xuat
+
+Route::get('/logout', [dangnhapController::class,'logout'])->name('logout');
 
 //sanpham
 Route::get('/sp',[Homecontroller::class,'sanpham'])->name("home.sanpham");
@@ -86,7 +91,7 @@ Route::post("/admin/{id}/save",[sanphamcontroller::class,'save'])->name("admin.s
 //admin bai viet//
 Route::get("/baiviet",[BaivietController::class,'baiviet'])->name("admin.baiviet.baiviet");
 
-Route::get("/baiviet/cre",[BaivietController::class,'create'])->name("admin.baiviet.create");
+Route::get("/create",[BaivietController::class,'create'])->name("admin.baiviet.create");
 
 Route::post("/baiviet/sto",[BaivietController::class,'store'])->name("admin.baiviet.store");
 
@@ -96,12 +101,33 @@ Route::get("/baiviet/{id}/edit",[BaivietController::class,'edit'])->name("admin.
 
 Route::post("/baiviet/{id}/save",[BaivietController::class,'save'])->name("admin.baiviet.save");
 
-//
 
+
+//admin danh muc//
+Route::get("/danhmuc",[quantridanhmuc::class,'danhmuc'])->name("admin.Danhmuc.danhmuc");
+
+Route::get("/danhmuc/create",[quantridanhmuc::class,'create'])->name("admin.Danhmuc.create");
+
+Route::post("/danhmuc/sto",[quantridanhmuc::class,'store'])->name("admin.Danhmuc.store");
+
+Route::get("/danhmuc/{id}/del",[quantridanhmuc::class,'Destroy'])->name("admin.Danhmuc.destroy");
+
+Route::get("/danhmuc/{id}/edit",[quantridanhmuc::class,'edit'])->name("admin.Danhmuc.edit");
+
+Route::post("/danhmuc/{id}/save",[quantridanhmuc::class,'save'])->name("admin.Danhmuc.save");
 
 
 //admin đơn hàng//
-Route::get("/donhang",[dondathangController::class,'donhang'])->name("admin.donhang.donhang");
+Route::get("/donhang",[dondathangController::class,'index_admin'])->name("admin.donhang.donhang");
+Route::get("/xacthucdonhang",[dondathangController::class,'daxacthuc'])->name("admin.donhang.daxacthuc");
+Route::get("/chuathanhtoan",[dondathangController::class,'chuathanhtoan'])->name("admin.donhang.chuathanhtoan");
+Route::get("/dathanhtoan",[dondathangController::class,'dathanhtoan'])->name("admin.donhang.dathanhtoan");
+Route::get('/confirm-order/{id}',[dondathangController::class,'confirmOrder'])->name('confirmOrder');
+Route::get('/confirm-order1/{id}',[dondathangController::class,'confirmOrder1'])->name('confirmOrder1');
+Route::get('/confirm-order2/{id}',[dondathangController::class,'confirmOrder2'])->name('confirmOrder2');
+Route::get("/donhang/{id}/del",[dondathangController::class,'Destroy'])->name("admin.donhang.Destroy");
+// Route::get("/xacthucdonhang/{id}/del",[dondathangController::class,'Destroy1'])->name("admin.baiviet.Destroy1");
+
 
 
 

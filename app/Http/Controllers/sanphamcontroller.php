@@ -41,6 +41,7 @@ class sanphamcontroller extends Controller
             $tieude->NgayTao = $req->input('NgayTao');
             $tieude->Mausac = $req->input('Mausac');
             $tieude->Size = $req->input('Size');
+            $tieude->Giaban = $req->input('Giaban');
             $tieude->NgayTao = date('Y-m-d H:i:s');
             $tieude->save();
     //    Sanpham::created($req->all());
@@ -70,6 +71,7 @@ class sanphamcontroller extends Controller
         $pro->AnhDaiDien=$res-> AnhDaiDien;
         $pro->MoTaSanPham=$res-> MoTaSanPham;
         $pro->NgayTao=$res-> NgayTao;
+        $pro->Giaban=$res-> Giaban;
         $pro->Mausac=$res-> Mausac;
         $pro->Size=$res-> Size;
         $pro->save();
